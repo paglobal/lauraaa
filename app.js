@@ -4,10 +4,9 @@ let buttonContainer;
 let slideshowContainer;
 let animatedText;
 
-let confettiSettings = { target: "my-canvas" };
-let confetti = new ConfettiGenerator(confettiSettings);
-
 let slideIndex = 0;
+let confettiSettings;
+let confetti;
 
 const texts = [
   "16",
@@ -36,6 +35,9 @@ let letterTimeout = 20;
 let paragraphTimeout = 1000;
 
 window.onload = function () {
+  confettiSettings = { target: "my-canvas" };
+  confetti = new ConfettiGenerator(confettiSettings);
+
   birthdayAudio = document.getElementById("birthday");
   musicPlayButton = document.querySelector(".music-play-button");
   buttonContainer = document.querySelector(".button-container");
