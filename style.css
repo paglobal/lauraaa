@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Megrim&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Megrim", cursive;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple:hover {
+  background: #fd418e radial-gradient(circle, transparent 1%, #fd418e 1%)
+    center/15000%;
+}
+
+.ripple:active {
+  background-color: #ffb9d5;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.ripple1 {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple1:hover {
+  background: #fff radial-gradient(circle, transparent 1%, #fff 1%)
+    center/15000%;
+}
+
+.ripple1:active {
+  background-color: #ffb9d5;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#my-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60vh;
+  background: #fff;
+}
+
+.music-play-button {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  position: relative;
+  background: #fd418e;
+  cursor: pointer;
+  box-shadow: 0 0 5px #999;
+}
+
+.music-play-button img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-43%, -50%);
+  width: 50px;
+  height: 50px;
+}
+
+.animated-text {
+  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animated-text p {
+  color: #fd418e;
+  font-size: 120px;
+}
+
+.slideshow-container {
+  width: 100%;
+  display: none;
+}
+
+.my-slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: none;
+}
+
+.my-slides p {
+  text-align: center;
+  color: #fd418e;
+  font-size: 50px;
+}
